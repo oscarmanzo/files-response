@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/iTest/java/com/fandango/commerce/PosServiceApplicationIntegrationTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/BasePOSStubLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/FilePOSResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/FileResponse.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/amc/AMCStubLoaderUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/library/BDDAppLibrary.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/penny/PennyStubLoaderUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/radiant/RadiantStubLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/retriever/RetrieverStubLoaderUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/titan/TitanStubLoaderUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/veezi/VeeziStubLoaderUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Project/pos-service/src/wiremock/java/com/fandango/commerce/wiremock/WireMockLifeCycleProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/fandango/files/CopyFiles.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/fandango/files/FilesReader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/fandango/files/ParseFile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/iTest/java/com/fandango/commerce/AmcServiceIntegrationTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/iTest/java/com/fandango/commerce/LogUtilTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/iTest/java/com/fandango/commerce/RedisServerManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/main/java/com/fandango/commerce/util/logging/RequestEvaluatorInterceptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/wiremock/java/com/fandango/commerce/BasePOSStubLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/wiremock/java/com/fandango/commerce/POSNotifier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/wiremock/java/com/fandango/commerce/wiremock/WireMockLifeCycleProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
