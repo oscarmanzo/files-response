@@ -78,6 +78,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/fandango/files/POSNotifier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/fandango/files/ParseFile.java">
           <value>
             <set />
@@ -94,6 +99,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../pos-service/src/iTest/java/com/fandango/commerce/RedisServerManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/main/java/com/fandango/commerce/util/StringUtilsPOS.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pos-service/src/main/java/com/fandango/commerce/util/logging/ClientLogger.java">
           <value>
             <set />
           </value>

@@ -1,11 +1,13 @@
 package com.fandango.files;
 
+import org.apache.commons.lang.math.NumberUtils;
+
 import java.io.File;
 import java.util.*;
 
 public class ParseFile {
 
-    private static final String LOG_FILE = "C:\\Users\\oscar.manzo\\Globant\\Fandango\\Services\\TO_REBASE\\pos-service\\logs\\posservice-app-access.log";
+    private static final String LOG_FILE = "C:\\Users\\oscar.manzo\\Globant\\Fandango\\Services\\TO_REBASE\\pos-service\\logs\\posservice-client.log";
 
     private static final String FIND_PERFORMANCE = "posPerformanceCode";
     private static final String FIND_FILE_NAME = "bodyFileName";
@@ -25,7 +27,10 @@ public class ParseFile {
 
         System.out.println("####################################################");
 
-        Map<List<String>, List<String>> groups = groupByPerformance(values);
+        Map<String, List<String>> map = fillMap(values);
+        map.forEach((k,v) -> System.out.println(k));
+
+        Map<String, List<String>> groups = groupByPerformance(values, map);
         print(groups);
     }
 
@@ -53,8 +58,8 @@ public class ParseFile {
         int index = textline.indexOf(toFind);
 
         if (index >= 0) {
-            //System.out.println("------------>"+ textline);
-            String aux = FIND_PERFORMANCE.equals(toFind) ? "\" : \"" : "\" : \"";
+            System.out.println("------------>"+ textline);
+            String aux = FIND_PERFORMANCE.equals(toFind) ? "\":\"" : "\" : \"";
             return parse(textline.substring(index), toFind, aux);
         }
 
@@ -66,7 +71,11 @@ public class ParseFile {
             int indexAux = text.indexOf(separator);
             String subaux = text.substring(indexAux + separator.length());
             String value = subaux.substring(0, subaux.indexOf("\""));
-            return Optional.of(toFind + " - " + value);
+
+            if (FIND_PERFORMANCE.equals(toFind) && (value==null || value.trim().isEmpty()))
+                value = "0";
+
+            return Optional.of(value);
         } catch (Exception e) {
             System.out.print("TO_PARSE:" + text);
             e.printStackTrace();
@@ -74,39 +83,45 @@ public class ParseFile {
         return Optional.empty();
     }
 
-    private Map<List<String>, List<String>> groupByPerformance(List<String> values){
+    private Map<String, List<String>> groupByPerformance(List<String> values, Map<String, List<String>> map){
         Map<List<String>, List<String>> groups = new HashMap<>();
+        Stack<String> stack = new Stack<>();
 
-        List<String> codes = new ArrayList<>();
-        List<String> files = new ArrayList<>();
+        for (String value : values){
+            if (!NumberUtils.isNumber(value)){
+                stack.push(value);
+            } else {
+                List<String> files = map.get(value);
 
-        for (String v : values){
-            if (v.contains(FIND_FILE_NAME)) {
-                files.add(v);
-            } else if (v.contains(FIND_PERFORMANCE)){
-                codes.add(v);
-
-                groups.put(codes, files);
-
-                codes = new ArrayList<>();
-                files = new ArrayList<>();
+                while (!stack.isEmpty()){
+                    files.add(stack.pop());
+                }
             }
         }
 
-        return groups;
+        return map;
+    }
+
+    private Map<String, List<String>> fillMap(List<String> values) {
+        Map<String, List<String>> map = new HashMap<>();
+
+        values.stream()
+                .filter(v -> NumberUtils.isNumber(v))
+                .distinct()
+                .forEach(s -> map.put(s, new ArrayList<String>()));
+
+        return map;
     }
 
     private void print(List<String> values){
         values.forEach(v -> System.out.println(v));
     }
 
-    private void print(Map<List<String>, List<String>> groups){
-        groups.forEach((ks,vs) -> {
+    private void print(Map<String, List<String>> groups){
+        groups.forEach((key,vs) -> {
             //System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            for (String key : ks){
-                for (String value : vs){
-                    System.out.println(key +"\t"+ value);
-                }
+            for (String value : vs){
+                System.out.println(key +"\t"+ value);
             }
         });
     }
